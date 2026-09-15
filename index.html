@@ -1,222 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muhammad Shafiu - Software Engineering portfolio, web development and tailoring projects.">
-  <title>Muhammad Shafiu | Software Engineer</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Muhammad Shafiu — Software Engineering graduate and web developer based in Madobi, Kano State, Nigeria.">
+<meta name="theme-color" content="#080a0f">
+<title>Muhammad Shafiu | Software Engineer & Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <nav class="nav container">
-      <a class="brand" href="#home">Muhammad<span>Shafiu</span></a>
-      <button class="menu-btn" aria-label="Open menu">☰</button>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#home">Muhammad<span>Shafiu</span></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#education">Education</a>
+      <a href="#experience">Experience</a><a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow">SOFTWARE ENGINEERING • WEB DEVELOPMENT</p>
-          <h1>Hello, I'm <span>Muhammad Shafiu</span></h1>
-          <p class="lead">
-            A Software Engineering graduate and web development learner with practical
-            experience in tailoring, fashion design, business, and working with people.
-          </p>
-          <div class="buttons">
-            <a class="btn primary" href="#projects">View My Projects</a>
-            <a class="btn secondary" href="#contact">Contact Me</a>
-          </div>
-        </div>
-        <div class="hero-photo">
-          <div class="photo-ring">
-            <img src="profile.png" alt="Muhammad Shafiu profile photo">
-          </div>
-        </div>
+<main>
+<section class="hero section" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span></span> SOFTWARE ENGINEERING & WEB DEVELOPMENT</p>
+      <h1>Hello, I'm <span>Muhammad Shafiu</span></h1>
+      <p class="hero-text">A Software Engineering graduate and web developer focused on building clean, responsive and user-friendly digital experiences.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View My Projects <span>↗</span></a>
+        <a class="btn btn-secondary" href="#contact">Let's Connect</a>
       </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <p class="section-tag">ABOUT ME</p>
-        <h2>Who I Am</h2>
-        <div class="about-grid">
-          <div class="card">
-            <p>
-              My name is <strong>Muhammad Shafiu</strong>. I was born in Nigeria, Kano State,
-              specifically in Madobi Local Government Area. I currently live in Madobi.
-            </p>
-            <p>
-              I started my primary education in 2008 at Abba Academy Nursery and Primary School,
-              Madobi, and completed it in 2014. I attended GTC Tiga for junior secondary school
-              and Ibrahim Ayagi Dawakin Tofa Science College for senior secondary school.
-            </p>
-            <p>
-              In 2023, I proceeded to Kano State Polytechnic, Innovation and Vocational Enterprise
-              Institute (IVEI), Matan Fada, Kano State, where I studied Software Engineering.
-              I completed my programme in 2025 and obtained a National Innovation Diploma (NID).
-            </p>
-          </div>
-          <div class="card highlight">
-            <h3>Beyond Technology</h3>
-            <p>
-              I am also actively involved in tailoring and fashion design. This business has
-              supported me financially and given me valuable practical experience while I was
-              studying.
-            </p>
-            <p>
-              My experience in Kano city and at home in Madobi has helped me develop communication
-              skills, confidence, business awareness, and the ability to interact with people.
-            </p>
-            <div class="mini-stat"><strong>NID</strong><span>National Innovation Diploma</span></div>
-            <div class="mini-stat"><strong>2025</strong><span>Programme completed</span></div>
-          </div>
-        </div>
+      <div class="quick-info">
+        <div><strong>Qualification</strong><span>National Innovation Diploma</span></div>
+        <div><strong>Based in</strong><span>Madobi, Kano, Nigeria</span></div>
       </div>
-    </section>
-
-    <section id="skills" class="section alt">
-      <div class="container">
-        <p class="section-tag">MY SKILLS</p>
-        <h2>What I Do</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="icon">01</div>
-            <h3>Web Development</h3>
-            <p>Building clean, responsive and user-friendly websites for phones, tablets and computers.</p>
-          </div>
-          <div class="skill-card">
-            <div class="icon">02</div>
-            <h3>Responsive System Design</h3>
-            <p>Designing layouts that automatically adapt to different screen sizes and resolutions.</p>
-          </div>
-          <div class="skill-card">
-            <div class="icon">03</div>
-            <h3>Tailoring & Fashion Design</h3>
-            <p>Practical tailoring and fashion design experience, including customer interaction and business.</p>
-          </div>
-          <div class="skill-card">
-            <div class="icon">04</div>
-            <h3>Communication</h3>
-            <p>Experience dealing with people in everyday life, business and professional environments.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <p class="section-tag">MY PROJECTS</p>
-        <h2>Projects & Work</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-number">01</div>
-            <h3>BAM-Marketing</h3>
-            <p>
-              An online marketplace for clothing designed to connect clothing products with
-              customers through an online platform.
-            </p>
-            <span class="status complete">Project</span>
-          </article>
-          <article class="project-card">
-            <div class="project-number">02</div>
-            <h3>Muhd_ms Tailoring Company</h3>
-            <p>
-              A project focused on tailoring and fashion design. The project is currently
-              in the development stage and has not yet been completed.
-            </p>
-            <span class="status progress">In Development</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="section alt">
-      <div class="container">
-        <p class="section-tag">EDUCATION</p>
-        <h2>My Education Journey</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span>2008 – 2014</span>
-            <div><h3>Abba Academy Nursery & Primary School</h3><p>Madobi</p></div>
-          </div>
-          <div class="timeline-item">
-            <span>2014 – 2017</span>
-            <div><h3>GTC Tiga</h3><p>Junior Secondary Education</p></div>
-          </div>
-          <div class="timeline-item">
-            <span>2017 – 2020</span>
-            <div><h3>Ibrahim Ayagi Dawakin Tofa Science College</h3><p>Senior Secondary Education</p></div>
-          </div>
-          <div class="timeline-item">
-            <span>2023 – 2025</span>
-            <div><h3>Kano State Polytechnic, IVEI</h3><p>Software Engineering • National Innovation Diploma (NID)</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="container narrow">
-        <p class="section-tag">EXPERIENCE</p>
-        <h2>Professional Experience</h2>
-        <div class="card experience-card">
-          <h3>One Utility Microfinance Bank (One Utility MFB)</h3>
-          <p>
-            After returning home to Madobi, I secured a job with One Utility Microfinance Bank.
-            This experience has added to my professional exposure and understanding of working
-            in an organized business environment.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <p class="section-tag">GET IN TOUCH</p>
-        <h2>Let's Connect</h2>
-        <p class="contact-intro">You can reach me through any of the channels below.</p>
-        <div class="contact-grid">
-          <a class="contact-card" href="tel:07010985983">
-            <strong>Phone</strong><span>07010985983</span>
-          </a>
-          <a class="contact-card" href="tel:09064209879">
-            <strong>Phone</strong><span>09064209879</span>
-          </a>
-          <a class="contact-card" href="tel:09021758593">
-            <strong>Phone</strong><span>09021758593</span>
-          </a>
-          <a class="contact-card" href="https://www.instagram.com/imuhd_ms" target="_blank" rel="noopener">
-            <strong>Instagram</strong><span>@imuhd_ms</span>
-          </a>
-          <a class="contact-card" href="https://www.facebook.com/muhammad.shafiu" target="_blank" rel="noopener">
-            <strong>Facebook</strong><span>Muhammad Shafiu</span>
-          </a>
-          <a class="contact-card" href="https://wa.me/2347010985983" target="_blank" rel="noopener">
-            <strong>WhatsApp</strong><span>@Muhd_ms1313</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Muhammad Shafiu. All rights reserved.</p>
-      <a href="#home">Back to top ↑</a>
     </div>
-  </footer>
+    <div class="hero-visual reveal">
+      <div class="image-frame">
+        <div class="image-glow"></div>
+        <img src="profile.png" alt="Portrait of Muhammad Shafiu" loading="eager">
+        <div class="image-tag"><span class="status-dot"></span> Available for opportunities</div>
+      </div>
+      <div class="floating-card card-one">Web Development</div>
+      <div class="floating-card card-two">Responsive Design</div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">ABOUT ME</p><h2>Building skills. Creating solutions.</h2></div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>I'm Muhammad Shafiu, a Software Engineering graduate with a strong interest in web development and practical technology solutions.</p>
+        <p>I enjoy learning how digital products work, creating responsive interfaces and turning ideas into useful, accessible websites.</p>
+        <p>I also have experience in tailoring and fashion design, which has strengthened my creativity, communication and understanding of customer needs.</p>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-card"><strong>2025</strong><span>Software Engineering<br>Graduate</span></div>
+        <div class="stat-card"><strong>2+</strong><span>Projects &<br>practical work</span></div>
+        <div class="stat-card"><strong>4+</strong><span>Core professional<br>skills</span></div>
+        <div class="stat-card"><strong>∞</strong><span>Curiosity for<br>learning</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section" id="skills">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">MY SKILLS</p><h2>What I can do</h2><p>Practical skills I continue to develop through projects and experience.</p></div>
+    <div class="skills-grid">
+      <article class="skill-card reveal"><div class="skill-icon">&lt;/&gt;</div><h3>Web Development</h3><p>Creating structured, modern and responsive websites for different screen sizes.</p><div class="skill-line"><span style="width:88%"></span></div></article>
+      <article class="skill-card reveal"><div class="skill-icon">◫</div><h3>Responsive Design</h3><p>Designing interfaces that work smoothly across mobile, tablet and desktop.</p><div class="skill-line"><span style="width:90%"></span></div></article>
+      <article class="skill-card reveal"><div class="skill-icon">✦</div><h3>UI & Visual Design</h3><p>Building clean layouts with attention to spacing, typography, hierarchy and usability.</p><div class="skill-line"><span style="width:82%"></span></div></article>
+      <article class="skill-card reveal"><div class="skill-icon">↗</div><h3>Communication</h3><p>Working with people, understanding needs and communicating ideas clearly.</p><div class="skill-line"><span style="width:86%"></span></div></article>
+      <article class="skill-card reveal"><div class="skill-icon">✂</div><h3>Tailoring & Fashion</h3><p>Practical tailoring and fashion-design experience alongside my technology skills.</p><div class="skill-line"><span style="width:80%"></span></div></article>
+      <article class="skill-card reveal"><div class="skill-icon">⌘</div><h3>Problem Solving</h3><p>Breaking tasks into clear steps and finding practical ways to improve a solution.</p><div class="skill-line"><span style="width:84%"></span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">SELECTED WORK</p><h2>Projects I'm proud of</h2></div>
+    <div class="projects-grid">
+      <article class="project-card featured reveal">
+        <div class="project-top"><span class="project-number">01</span><span class="project-status">Academic Project</span></div>
+        <div class="project-content"><p class="project-type">E-COMMERCE / WEB DEVELOPMENT</p><h3>BAM-Marketing</h3><p>An online marketplace concept for clothing, designed to help customers discover clothing products through a simple digital platform.</p><div class="tags"><span>Web</span><span>Marketplace</span><span>Clothing</span></div></div>
+      </article>
+      <article class="project-card reveal">
+        <div class="project-top"><span class="project-number">02</span><span class="project-status">In Development</span></div>
+        <div class="project-content"><p class="project-type">FASHION / BUSINESS</p><h3>Muhd_ms Tailoring Company</h3><p>A tailoring and fashion-design business project focused on presenting services and building a professional digital identity.</p><div class="tags"><span>Fashion</span><span>Branding</span><span>Business</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section" id="education">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">EDUCATION</p><h2>My learning journey</h2></div>
+    <div class="timeline">
+      <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-year">2023 — 2025</div><div class="timeline-content"><h3>Kano State Polytechnic — IVEI</h3><p>Software Engineering · National Innovation Diploma (NID)</p><span>Matan Fada, Kano State</span></div></article>
+      <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-year">2017 — 2020</div><div class="timeline-content"><h3>Ibrahim Ayagi Dawakin Tofa Science College</h3><p>Senior Secondary Education</p><span>Kano State, Nigeria</span></div></article>
+      <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-year">2014 — 2017</div><div class="timeline-content"><h3>GTC Tiga</h3><p>Junior Secondary Education</p><span>Kano State, Nigeria</span></div></article>
+      <article class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-year">2008 — 2014</div><div class="timeline-content"><h3>Abba Academy Nursery & Primary School</h3><p>Primary Education</p><span>Madobi, Kano State</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">EXPERIENCE</p><h2>Professional experience</h2></div>
+    <div class="experience-card reveal">
+      <div class="experience-badge">01</div>
+      <div><p class="project-type">WORK EXPERIENCE</p><h3>One Utility Microfinance Bank</h3><p>Professional work experience that strengthened my communication, teamwork, responsibility and workplace skills.</p></div>
+      <span class="experience-arrow">↗</span>
+    </div>
+  </div>
+</section>
+
+<section class="section contact dark-section" id="contact">
+  <div class="container">
+    <div class="contact-header reveal"><p class="eyebrow">GET IN TOUCH</p><h2>Let's build something useful.</h2><p>Have an opportunity, project idea or professional enquiry? You can reach me through the channels below.</p></div>
+    <div class="contact-grid">
+      <a class="contact-card reveal" href="https://wa.me/2347010985983" target="_blank" rel="noopener"><span class="contact-icon">WA</span><span><small>WHATSAPP</small><strong>Chat with me</strong></span><b>↗</b></a>
+      <a class="contact-card reveal" href="https://www.instagram.com/imuhd_ms" target="_blank" rel="noopener"><span class="contact-icon">IG</span><span><small>INSTAGRAM</small><strong>@imuhd_ms</strong></span><b>↗</b></a>
+      <a class="contact-card reveal" href="tel:+2347010985983"><span class="contact-icon">☎</span><span><small>PHONE</small><strong>0701 098 5983</strong></span><b>↗</b></a>
+      <a class="contact-card reveal" href="mailto:Muhdmstailoringcompany@gmail.com"><span class="contact-icon">@</span><span><small>EMAIL</small><strong>Muhdmstailoringcompany@gmail.com</strong></span><b>↗</b></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-wrap">
+    <div><a class="brand" href="#home">Muhammad<span>Shafiu</span></a><p>Software Engineering · Web Development</p></div>
+    <div class="footer-right"><p>© <span id="year"></span> Muhammad Shafiu. All rights reserved.</p><a href="#home">Back to top ↑</a></div>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
