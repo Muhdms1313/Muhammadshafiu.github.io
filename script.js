@@ -1,72 +1,224 @@
-// Muhammad Shafiu Personal Portfolio
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Current year in footer
-  const year = document.getElementById("year");
+  // ==========================================
+  // 1. FOOTER YEAR
+  // ==========================================
+  var yearElement = document.getElementById("year");
 
-  if (year) {
-    year.textContent = new Date().getFullYear();
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
   }
 
-  // Mobile menu
-  const menuBtn = document.querySelector(".menu-btn");
-  const navLinks = document.querySelector(".nav-links");
 
-  if (menuBtn && navLinks) {
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+  // ==========================================
+  // 2. MOBILE MENU
+  // ==========================================
+  var menuButton = document.getElementById("menu");
+  var navigation = document.getElementById("nav");
 
-      const isOpen = navLinks.classList.contains("active");
-      menuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  if (menuButton && navigation) {
+
+    menuButton.addEventListener("click", function () {
+
+      navigation.classList.toggle("open");
+
+      var menuIsOpen = navigation.classList.contains("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        menuIsOpen ? "true" : "false"
+      );
+
+      menuButton.setAttribute(
+        "aria-label",
+        menuIsOpen ? "Close menu" : "Open menu"
+      );
+
     });
+
 
     // Close menu after clicking a link
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuBtn.setAttribute("aria-label", "Open menu");
+    var navigationLinks = navigation.querySelectorAll("a");
+
+    navigationLinks.forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navigation.classList.remove("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          "Open menu"
+        );
+
       });
+
     });
+
   }
 
-  // Smooth scrolling
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const targetId = link.getAttribute("href");
-      const target = document.querySelector(targetId);
 
-      if (target) {
-        event.preventDefault();
+  // ==========================================
+  // 3. SCROLL PROGRESS BAR
+  // ==========================================
+  var progressBar = document.getElementById("progress");
 
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
-    });
-  });
+  function updateProgress() {
 
-  // Simple scroll reveal animation
-  const revealItems = document.querySelectorAll(
-    ".section, .card, .skill-card, .project-card, .timeline-item, .contact-card"
+    if (!progressBar) {
+      return;
+    }
+
+    var scrollTop =
+      window.scrollY ||
+      document.documentElement.scrollTop;
+
+    var documentHeight =
+      document.documentElement.scrollHeight;
+
+    var windowHeight =
+      window.innerHeight;
+
+    var scrollHeight =
+      documentHeight - windowHeight;
+
+    if (scrollHeight <= 0) {
+
+      progressBar.style.width = "0%";
+
+      return;
+    }
+
+    var scrollPercentage =
+      (scrollTop / scrollHeight) * 100;
+
+    progressBar.style.width =
+      scrollPercentage + "%";
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    updateProgress,
+    { passive: true }
   );
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.12
+  window.addEventListener(
+    "resize",
+    updateProgress
+  );
+
+  updateProgress();
+
+
+  // ==========================================
+  // 4. ACTIVE NAVIGATION LINK
+  // ==========================================
+  var sections =
+    document.querySelectorAll(
+      "main section[id]"
+    );
+
+  var navLinks =
+    document.querySelectorAll(
+      "nav a"
+    );
+
+
+  function updateActiveNavigation() {
+
+    var currentSection = "home";
+
+    var scrollPosition =
+      (window.scrollY || 0) + 180;
+
+
+    sections.forEach(function (section) {
+
+      if (
+        scrollPosition >=
+        section.offsetTop
+      ) {
+
+        currentSection =
+          section.getAttribute("id");
+
+      }
+
+    });
+
+
+    navLinks.forEach(function (link) {
+
+      var linkTarget =
+        link.getAttribute("href");
+
+      if (
+        linkTarget ===
+        "#" + currentSection
+      ) {
+
+        link.classList.add("active");
+
+      } else {
+
+        link.classList.remove("active");
+
+      }
+
+    });
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    updateActiveNavigation,
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "resize",
+    updateActiveNavigation
+  );
+
+  updateActiveNavigation();
+
+
+  // ==========================================
+  // 5. CLOSE MOBILE MENU WHEN RESIZING
+  // ==========================================
+  window.addEventListener(
+    "resize",
+    function () {
+
+      if (
+        window.innerWidth > 850 &&
+        navigation &&
+        menuButton
+      ) {
+
+        navigation.classList.remove("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          "Open menu"
+        );
+
+      }
+
     }
   );
 
-  revealItems.forEach((item) => {
-    item.classList.add("reveal");
-    observer.observe(item);
-  });
 });
